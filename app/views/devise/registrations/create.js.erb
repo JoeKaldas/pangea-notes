@@ -1,0 +1,11 @@
+// Called on failed & successful signup
+<%if resource.valid? && resource.persisted? %>
+	// Successful signup
+	$("#signupStepHeader").text("Link your pages");
+	$(".step-indicator li").removeClass("active");
+	$(".step-indicator").find(`li[data-step="${1}"]`).addClass("active");
+	$("#signupCurrentForm").hide().html("<%= escape_javascript(render partial: 'facebook')%>").show("slide", { direction: "left" }, 500);
+<%else%>
+	// Failed signup
+	$("#signup-error-messages").text("<% @errors.each do |message| %><%=message.html_safe%>\n<%end%>").removeClass("d-none");
+<%end%>

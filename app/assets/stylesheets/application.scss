@@ -1,0 +1,36 @@
+@import "variables";
+
+/* ############### BOOTSTRAP ############# */
+@import "bootstrap";
+
+/* ############### BASE LIBRARY STYLES ############# */
+@import "lib/jquery-ui";
+
+/* ############### UTILITIES/HELPER CLASSES ############### */
+@import "util/mixins";
+@import "util/height";
+@import "util/margin";
+@import "util/misc";
+@import "util/padding";
+@import "util/position";
+@import "util/transform";
+@import "util/width";
+
+/* ############### OVERRIDE LIBRARY STYLES ############# */
+@import "partials/swal";
+
+/* ############### FONT MEDIA QUERIES ############### */
+
+html,
+body {
+    color: $black;
+}
+
+input:focus,
+select:focus,
+.form-control:focus,
+textarea:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

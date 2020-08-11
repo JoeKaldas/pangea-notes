@@ -1,0 +1,21 @@
+@mixin drop-shadow {
+    -webkit-box-shadow: 5px 5px 15px 0px rgba(246, 247, 250, 1);
+    -moz-box-shadow: 5px 5px 15px 0px rgba(246, 247, 250, 1);
+    box-shadow: 5px 5px 15px 0px rgba(246, 247, 250, 1);
+}
+
+@mixin custom-select-arrow {
+    position: absolute;
+    top: calc(50% - 1em);
+    right: 2rem;
+
+    // content: '\f078';
+
+    // font-family: 'Font Awesome 5 free';
+    font-family: 'icomoon';
+    content: '\e908';
+    font-size: 0.5em;
+    pointer-events: none;
+    font-weight: 900;
+    color: $gray-extra-dark;
+}

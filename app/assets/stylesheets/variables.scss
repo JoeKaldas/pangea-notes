@@ -1,0 +1,23 @@
+// Colors
+
+// $black: #000;
+
+// $pretty--color-default: $black;
+
+$black: #29363c;
+$primary: #EC1B23;
+$success: #50ec90;
+$danger: #c90101;
+$gray: #f6f7fa;
+$gray-dark: #cfc9d0;
+$gray-extra-dark: #707070;
+$text-muted: $gray-dark;
+$body-color: $black;
+$input-border-radius: 5px;
+
+$theme-colors: ("gray": $gray, "gray-dark": $gray-dark, "gray-extra-dark": $gray-extra-dark);
+
+// Typography
+
+// Override default grid breakpoints & add extra screen size
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1600px);

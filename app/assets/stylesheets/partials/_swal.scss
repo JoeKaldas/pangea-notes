@@ -1,0 +1,25 @@
+#swal2-title {
+    color: $black;
+}
+
+.swal2-styled {
+    border: 0 !important;
+    border-radius: 5px !important;
+    background: initial !important;
+    font-weight: bold !important;
+
+    &.swal2-confirm {
+        background-color: $primary !important;
+        color: #fff !important;
+    }
+
+    &.swal2-cancel {
+        background-color: white !important;
+        border: 1px solid $primary !important;
+        color: $primary !important;
+    }
+}
+
+.swal2-loading > .swal2-confirm.swal2-styled {
+    color: #D61F1F !important;
+}
