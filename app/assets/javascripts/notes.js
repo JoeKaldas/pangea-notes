@@ -2,6 +2,7 @@
 // All this logic will automatically be available in application.js.
 
 //= require lib/datatables
+//= require lib/protip.min
 
 $(document).ready(function() {
 	var table = $('#notes-table').DataTable({
@@ -24,20 +25,15 @@ $(document).ready(function() {
 		}, {
 			"data": "body"
 		}, {
-			"data": "short_body"
-		}, {
 			"data": "actions"
 		}],
 		"columnDefs": [{
 			"targets": 'no-sort',
 			"orderable": false,
-		}, {
-			"targets": [3],
-			"visible": false
 		}, ],
 	});
 
 	table.on('draw', function() {
-		$('[data-toggle="tooltip"]').tooltip();
+		$.protip();
 	});
 });
