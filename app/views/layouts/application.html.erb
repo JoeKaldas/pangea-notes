@@ -19,6 +19,32 @@
     <link rel="shortcut icon" href="<%= image_path 'icon.ico' %>" type="image/ico" />
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg border-0 py-3 px-5 navbar-light bg-light">
+      <a class="navbar-brand text-uppercase font-weight-bold" href="/">Notes</a>
+      <button id="navbar-toggler" class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="bs-example-navbar-collapse-1">
+        <ul class="navbar-nav mr-5">
+          <% if current_user %>
+            <li class="nav-item dropdown my-1 my-sm-0 ">
+              <a href="#" id="navbarDropdown" class="dropdown-toggle nav-link d-flex align-items-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <div><%= current_user.email %></div>
+                <i class="icon icon-Dropdown ml-2 position-relative"></i>
+              </a>
+              <div class="dropdown-menu my-1 my-sm-0 " aria-labelledby="navbarDropdown">
+                <%=link_to "Log Out", destroy_user_session_path, method: :delete , class: "pd-l-10 text-dark", style: "font-size: 16px;" %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item my-1 my-sm-0 text-uppercase"> <%=link_to "Login", new_user_session_path, method: :get , class: "pd-l-10 text-dark" %></li>
+          <%end%>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
     <div id="page-content">
       <%= yield %>
     </div>

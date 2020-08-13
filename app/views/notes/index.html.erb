@@ -1,0 +1,26 @@
+<div class="m-5">
+  <div class="row mb-4 px-3 align-items-center">
+    <div class="col-12 col-sm-6">
+      <h5 class="font-weight-bold text-uppercase">Notes</h5>
+    </div>
+    <div class="col-12 col-sm-6 d-flex justify-content-end">
+      <%= button_to "Add Note", new_note_path, class: "btn btn-dark", method: "get" %>
+    </div>
+  </div>
+  <div class="bg-white p-3 my-4">
+    <table class="table table-hover" id="notes-table" data-source="<%= notes_path(format: :json) %>">
+      <thead>
+        <tr>
+          <th> ID </th>
+          <th> Created at </th>
+          <th> Title </th>
+          <th> </th>
+          <th> Body </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>

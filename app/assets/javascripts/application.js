@@ -16,8 +16,8 @@
 //= require popper
 //= require bootstrap
 //= require activestorage
-//= require lib/swalURLMessage
 //= require lib/jquery.retryAjax
+//= require lib/sweetalert2.min
 
 $(function() {
 	// Focus input-group-append on input-focus
