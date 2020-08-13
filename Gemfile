@@ -70,3 +70,5 @@ gem 'htmlbeautifier'
 gem 'simple_form'
 # Object serializer
 gem 'fast_jsonapi'
+# Background processes
+gem 'delayed_job_active_record'
