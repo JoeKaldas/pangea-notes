@@ -33,8 +33,8 @@ class NoteDatatable < AjaxDatatablesRails::ActiveRecord
         body: record.body,
         short_body: record.body[0..50],
         actions: content_tag(:div, class: "d-flex justify-content-start align-items-center") do
-          concat(link_to '<i class="far fa-edit text-dark"></i>'.html_safe, edit_note_path(record), :data => { remote: true, method: 'get', 'target' => '#editModal', 'pt-title' => "Edit" }, class: "mr-3 protip")
-          concat(link_to '<i class="far fa-trash-alt text-danger"></i>'.html_safe, note_path(record), method: :delete, :data => { remote: true, :toggle => "tooltip", :placement=>"top", :confirm => "Are you sure you want to delete this note?", 'pt-title' => "Delete" }, class: "mr-3 protip")
+          concat(link_to '<i class="far fa-edit text-dark"></i>'.html_safe, edit_note_path(record), :data => { method: 'get', 'target' => '#editModal', 'pt-title' => "Edit" }, class: "mr-3 protip")
+          concat(link_to '<i class="far fa-trash-alt text-danger"></i>'.html_safe, note_path(record), method: :delete, :data => {:toggle => "tooltip", :placement=>"top", :confirm => "Are you sure you want to delete this note?", 'pt-title' => "Delete" }, class: "mr-3 protip")
         end,
         DT_RowId: record.id
       }

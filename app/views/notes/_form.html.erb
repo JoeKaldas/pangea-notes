@@ -1,0 +1,23 @@
+<div class="m-5">
+  <h5 class="font-weight-bold text-uppercase text-center"><%= @note.id ? "Edit" : "New" %> Note</h5>
+  <%= simple_form_for @note do |f| %>
+    <div class="row">
+      <div class="col-12">
+        <%= render 'shared/error_messages', object: @note %>
+      </div>
+      <div class="col-8 offset-2">
+        <div class="bg-white p-3 my-3 position-sticky">
+          <div class="col-12 mb-3">
+            <%= f.input :title, required: true %>
+          </div>
+          <div class="col-12 mb-3">
+            <%= f.input :body, required: true %>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 mb-3">
+        <center><%= f.button :submit, @note.id ? "Update" : "Add", :class=>"btn btn-dark text-uppercase"%></center>
+      </div>
+    </div>
+  <%end%>
+</div>

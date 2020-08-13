@@ -1,0 +1,5 @@
+swal.close()
+if ($("#notes-table").length) {
+	var table = $('#notes-table').DataTable({"retrieve": true})
+	table.ajax.reload();
+}
