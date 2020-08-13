@@ -7205,3 +7205,925 @@ Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.2ms | Allocations: 383
 
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+Started GET "/notes" for ::1 at 2020-08-13 20:28:53 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 414)
+Completed 200 OK in 358ms (Views: 327.9ms | ActiveRecord: 4.6ms | Allocations: 266768)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:28:53 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:28:54 +0200
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=short_body&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597343333983" for ::1 at 2020-08-13 20:28:54 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"short_body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597343333983"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/notes" for ::1 at 2020-08-13 20:28:54 +0200
+Processing by NotesController#index as */*
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 123)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 49ms (Views: 31.0ms | ActiveRecord: 6.7ms | Allocations: 15773)
+
+
+Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 1.5ms | Allocations: 43189)
+
+
+Started GET "/notes/new" for ::1 at 2020-08-13 20:28:55 +0200
+Processing by NotesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 194)
+  Rendered notes/_form.html.erb (Duration: 48.4ms | Allocations: 16071)
+  Rendered notes/new.html.erb within layouts/application (Duration: 49.4ms | Allocations: 16355)
+Completed 200 OK in 105ms (Views: 91.5ms | ActiveRecord: 3.3ms | Allocations: 58600)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:28:55 +0200
+Started GET "/notes/new" for ::1 at 2020-08-13 20:28:55 +0200
+Processing by NotesController#new as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 7.6ms | Allocations: 6105)
+  Rendered notes/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 6308)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.6ms | Allocations: 44967)
+
+
+Started POST "/notes" for ::1 at 2020-08-13 20:29:08 +0200
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"xxtd3oEedvsgjoEeK2ANhS2b8sTG5h6HkcY5/dShRmEoEpjfMiN9yhKpGNCqfVf9HgNdx4jErqySsH0V1LhfOQ==", "note"=>{"title"=>"This is a title", "body"=>"This is a body This is a body\r\nThis is a body\r\nThis is a body\r\nThis is a body"}, "commit"=>"Add"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:22:in `create'
+  [1m[36mNote Create (1.2ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "This is a title"], ["body", "This is a body This is a body\r\nThis is a body\r\nThis is a body\r\nThis is a body"], ["user_id", 1], ["created_at", "2020-08-13 18:29:08.777777"], ["updated_at", "2020-08-13 18:29:08.777777"]]
+  ↳ app/controllers/notes_controller.rb:22:in `create'
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:22:in `create'
+Redirected to http://localhost:3000/notes
+Completed 302 Found in 24ms (ActiveRecord: 15.2ms | Allocations: 4883)
+
+
+Started GET "/notes" for ::1 at 2020-08-13 20:29:08 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.2ms | Allocations: 38353)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:29:08 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:29:09 +0200
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=short_body&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597343348967" for ::1 at 2020-08-13 20:29:09 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"short_body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597343348967"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+Started GET "/notes" for ::1 at 2020-08-13 20:29:09 +0200
+  [1m[36mNote Load (1.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 3.9ms | Allocations: 6097)
+
+
+Processing by NotesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.7ms | Allocations: 38451)
+
+
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:29:15 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"authenticity_token"=>"4ACwMI//AFY/UfjKOCPXBhWOCuVPvyikVymB91dsjVwPCXUxPMILZw12YQS5Po1+Jhal5gGdmI9UX8UfV3WUBA==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 7.9ms | Allocations: 6043)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 8.6ms | Allocations: 6183)
+Completed 200 OK in 62ms (Views: 57.0ms | ActiveRecord: 0.7ms | Allocations: 45445)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:29:16 +0200
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:29:16 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 8.1ms | Allocations: 6015)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 6075)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.5ms | Allocations: 45308)
+
+
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:29:49 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"authenticity_token"=>"4ACwMI//AFY/UfjKOCPXBhWOCuVPvyikVymB91dsjVwPCXUxPMILZw12YQS5Po1+Jhal5gGdmI9UX8UfV3WUBA==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 187)
+  Rendered notes/_form.html.erb (Duration: 8.6ms | Allocations: 6542)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 6820)
+Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 0.6ms | Allocations: 46887)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:29:49 +0200
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:29:49 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 9.2ms | Allocations: 6148)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 6351)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.8ms | Allocations: 45609)
+
+
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:29:58 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"authenticity_token"=>"4ACwMI//AFY/UfjKOCPXBhWOCuVPvyikVymB91dsjVwPCXUxPMILZw12YQS5Po1+Jhal5gGdmI9UX8UfV3WUBA==", "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered notes/_form.html.erb (Duration: 9.0ms | Allocations: 6553)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 6829)
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 0.6ms | Allocations: 46918)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:29:58 +0200
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:29:58 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 7.6ms | Allocations: 6151)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 6354)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 0.6ms | Allocations: 45582)
+
+
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:31:11 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"authenticity_token"=>"4ACwMI//AFY/UfjKOCPXBhWOCuVPvyikVymB91dsjVwPCXUxPMILZw12YQS5Po1+Jhal5gGdmI9UX8UfV3WUBA==", "id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered notes/_form.html.erb (Duration: 9.2ms | Allocations: 6540)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 10.2ms | Allocations: 6814)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.5ms | Allocations: 46902)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:31:11 +0200
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:31:12 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 7.8ms | Allocations: 6169)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 8.5ms | Allocations: 6372)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 0.5ms | Allocations: 45608)
+
+
+Started GET "/" for ::1 at 2020-08-13 20:31:12 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 258)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.3ms | Allocations: 38649)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:31:12 +0200
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=short_body&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597343472510" for ::1 at 2020-08-13 20:31:12 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"short_body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597343472510"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 1.4ms | Allocations: 5671)
+
+
+Started GET "/" for ::1 at 2020-08-13 20:31:12 +0200
+Processing by NotesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 120)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.2ms | Allocations: 38373)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:31:13 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 140)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 0.7ms | Allocations: 39407)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:31:13 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:31:14 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:31:14 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.5ms | Allocations: 39256)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:31:30 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+Completed 200 OK in 52ms (Views: 47.9ms | ActiveRecord: 0.5ms | Allocations: 40228)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:31:30 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:31:31 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 0.6ms | Allocations: 39252)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:31:47 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 145)
+Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 0.6ms | Allocations: 40258)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:31:47 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:31:48 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:31:48 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 72ms (Views: 66.1ms | ActiveRecord: 0.9ms | Allocations: 39270)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:01 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 141)
+Completed 200 OK in 68ms (Views: 63.2ms | ActiveRecord: 0.5ms | Allocations: 40212)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:32:01 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:32:02 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:02 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 58ms (Views: 51.0ms | ActiveRecord: 1.3ms | Allocations: 39403)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:12 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 146)
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 0.6ms | Allocations: 40251)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:32:12 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:32:12 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:32:12 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:32:12 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:32:12 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:32:13 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:13 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 66ms (Views: 54.5ms | ActiveRecord: 5.4ms | Allocations: 39259)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:18 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 140)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 0.4ms | Allocations: 40226)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:32:18 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:18 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (4.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 65ms (Views: 52.9ms | ActiveRecord: 5.3ms | Allocations: 39259)
+
+
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:35 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Completed 200 OK in 63ms (Views: 57.2ms | ActiveRecord: 1.0ms | Allocations: 40248)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:32:35 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:32:35 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 61ms (Views: 54.9ms | ActiveRecord: 0.5ms | Allocations: 39248)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:33:30 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 292)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 0.3ms | Allocations: 40399)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:33:30 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:33:30 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 148)
+Completed 200 OK in 64ms (Views: 56.1ms | ActiveRecord: 1.1ms | Allocations: 39384)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:33:40 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 282)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 0.4ms | Allocations: 40394)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:33:40 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:33:40 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 146)
+Completed 200 OK in 59ms (Views: 53.6ms | ActiveRecord: 0.5ms | Allocations: 39382)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:15 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 447)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 0.6ms | Allocations: 40562)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:34:15 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:15 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 291)
+Completed 200 OK in 65ms (Views: 58.2ms | ActiveRecord: 1.1ms | Allocations: 39525)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:45 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 455)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 0.6ms | Allocations: 40561)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:34:45 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:45 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 296)
+Completed 200 OK in 90ms (Views: 82.1ms | ActiveRecord: 0.8ms | Allocations: 39530)
+
+
+Started POST "/notes/5/edit" for ::1 at 2020-08-13 20:34:47 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/notes/5/edit"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:34:47 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered notes/_form.html.erb (Duration: 11.1ms | Allocations: 6657)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 12.4ms | Allocations: 6964)
+Completed 200 OK in 73ms (Views: 65.7ms | ActiveRecord: 0.6ms | Allocations: 46310)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:54 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 390)
+Completed 200 OK in 65ms (Views: 59.2ms | ActiveRecord: 0.5ms | Allocations: 40545)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:54 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 238)
+Completed 200 OK in 78ms (Views: 72.1ms | ActiveRecord: 0.4ms | Allocations: 39420)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:34:54 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:34:55 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:34:55 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 238)
+Completed 200 OK in 63ms (Views: 57.2ms | ActiveRecord: 0.5ms | Allocations: 39312)
+
+
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:34:55 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered notes/_form.html.erb (Duration: 9.0ms | Allocations: 6591)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 6869)
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 0.3ms | Allocations: 46119)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:34:55 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:34:55 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:34:55 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:34:55 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:34:55 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:34:56 +0200
+Started GET "/notes/5/edit" for ::1 at 2020-08-13 20:34:56 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 8.7ms | Allocations: 6188)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 6391)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.4ms | Allocations: 45632)
+
+
+Started GET "/" for ::1 at 2020-08-13 20:34:59 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 256)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 0.2ms | Allocations: 38668)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:34:59 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:35:00 +0200
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=short_body&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597343699995" for ::1 at 2020-08-13 20:35:00 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"short_body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597343699995"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 3.4ms | Allocations: 5678)
+
+
+Started GET "/" for ::1 at 2020-08-13 20:35:00 +0200
+Processing by NotesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.2ms | Allocations: 38375)
+
+
+Started GET "/notes/5" for ::1 at 2020-08-13 20:35:04 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 237)
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 0.5ms | Allocations: 39335)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-13 20:35:04 +0200
+Started GET "/notes/5" for ::1 at 2020-08-13 20:35:05 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 237)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.4ms | Allocations: 39329)
+
+

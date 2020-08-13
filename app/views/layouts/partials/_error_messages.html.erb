@@ -1,15 +1,15 @@
 <% if object.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger drop-shadow d-flex justify-content-between align-items-center">
-        <div>
-            <div>
-                Couldn't complete your request: <%= pluralize(object.errors.count, "error") %>.
-            </div>
-            <ul>
-                <% object.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-            </ul>
-        </div>
-        <i class="fas fa-times text-black" data-dismiss="alert" aria-label="Close"></i>
+  <div id="error_explanation" class="alert alert-danger drop-shadow d-flex justify-content-between align-items-center">
+    <div>
+      <div>
+        Couldn't complete your request: <%= pluralize(object.errors.count, "error") %>.
+      </div>
+      <ul>
+        <% object.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
     </div>
+    <i class="fas fa-times text-black" data-dismiss="alert" aria-label="Close"></i>
+  </div>
 <% end %>

@@ -1,0 +1,14 @@
+<div class="m-5">
+  <div class="row mb-4 px-3 align-items-center">
+    <div class="col-12 d-flex justify-content-between">
+      <h4>Note #<%= @note.id %></h4>
+      <%= button_to "Edit", edit_note_path(@note), class: "btn btn-dark", method: "get" %>
+    </div>
+    <div class="col-12 mt-4">
+      <h5><%= @note.title %></h5>
+    </div>
+    <div class="col-12 mt-3">
+      <%= simple_format(@note.body) %>
+    </div>
+  </div>
+</div>
