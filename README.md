@@ -55,6 +55,10 @@ Rails version: '>= 6.0.0'
 ## Project setup
 ```
 bundle install
+rake notes:fresh
 ```
+
+## Database used
+postgres
 ...
 
