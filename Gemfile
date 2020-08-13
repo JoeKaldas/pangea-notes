@@ -72,3 +72,5 @@ gem 'simple_form'
 gem 'fast_jsonapi'
 # Background processes
 gem 'delayed_job_active_record'
+# Ajax for Datables
+gem 'ajax-datatables-rails'
