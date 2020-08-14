@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_160659) do
+ActiveRecord::Schema.define(version: 2020_08_14_141555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 2020_08_10_160659) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
+  end
+
+  create_table "note_collaborators", force: :cascade do |t|
+    t.bigint "note_id"
+    t.string "email"
+    t.integer "access"
+    t.integer "status", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["note_id"], name: "index_note_collaborators_on_note_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -51,5 +61,6 @@ ActiveRecord::Schema.define(version: 2020_08_10_160659) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "note_collaborators", "notes"
   add_foreign_key "notes", "users"
 end
