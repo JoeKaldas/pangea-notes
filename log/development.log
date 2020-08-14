@@ -22460,3 +22460,870 @@ FOREIGN KEY ("note_id")
   ↳ app/assets/javascripts/channels/notes.js.erb:11:in `_evaluate_template'
 DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
 https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from load at /Users/joekaldas/.rbenv/versions/2.7.0/bin/rake:23)
+Started GET "/cable" for ::1 at 2020-08-14 16:22:44 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:22:45 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/notes" for ::1 at 2020-08-14 16:22:53 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 414)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb___1060389471729759197_19140 at /Users/joekaldas/Documents/Dev/Web/notes/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 1495ms (Views: 1468.6ms | ActiveRecord: 5.1ms | Allocations: 281753)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:22:54 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:22:55 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:22:55 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:22:55 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=collaborators&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597414975006" for ::1 at 2020-08-14 16:22:55 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"collaborators", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597414975006"}
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/notes" for ::1 at 2020-08-14 16:22:55 +0200
+Processing by NotesController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 123)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+  [1m[36mNoteCollaborator Load (16.9ms)[0m  [1m[34mSELECT "note_collaborators".* FROM "note_collaborators" WHERE "note_collaborators"."note_id" = $1[0m  [["note_id", 9]]
+  ↳ app/datatables/note_datatable.rb:34:in `block in data'
+  [1m[36mNoteCollaborator Load (0.3ms)[0m  [1m[34mSELECT "note_collaborators".* FROM "note_collaborators" WHERE "note_collaborators"."note_id" = $1[0m  [["note_id", 8]]
+  ↳ app/datatables/note_datatable.rb:34:in `block in data'
+Completed 200 OK in 124ms (Views: 59.8ms | ActiveRecord: 40.5ms | Allocations: 38910)
+
+
+Completed 200 OK in 138ms (Views: 130.8ms | ActiveRecord: 2.9ms | Allocations: 61484)
+
+
+Started GET "/notes.json?draw=2&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=collaborators&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=4&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597414975007" for ::1 at 2020-08-14 16:22:57 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"2", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"collaborators", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"4", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597414975007"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms | Allocations: 5494)
+
+
+  
+NoMethodError (undefined method `fetch' for nil:NilClass):
+  
+app/datatables/note_datatable.rb:28:in `data'
+app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+app/controllers/notes_controller.rb:7:in `index'
+Started GET "/notes" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:23:54 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 130)
+Completed 200 OK in 79ms (Views: 61.1ms | ActiveRecord: 4.5ms | Allocations: 50058)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:23:54 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:23:54 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:23:55 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:23:55 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=collaborators&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597415034855" for ::1 at 2020-08-14 16:23:55 +0200
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"collaborators", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597415034855"}
+Started GET "/notes" for ::1 at 2020-08-14 16:23:55 +0200
+Processing by NotesController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 127)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "notes"."id" FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1) subquery_for_count[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "notes"."id" FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1) subquery_for_count[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mSQL (0.8ms)[0m  [1m[34mSELECT DISTINCT notes.created_at AS alias_0, "notes"."id" FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+  [1m[35mSQL (1.2ms)[0m  [1m[34mSELECT "notes"."id" AS t0_r0, "notes"."title" AS t0_r1, "notes"."body" AS t0_r2, "notes"."user_id" AS t0_r3, "notes"."created_at" AS t0_r4, "notes"."updated_at" AS t0_r5, "note_collaborators"."id" AS t1_r0, "note_collaborators"."note_id" AS t1_r1, "note_collaborators"."email" AS t1_r2, "note_collaborators"."access" AS t1_r3, "note_collaborators"."status" AS t1_r4, "note_collaborators"."created_at" AS t1_r5, "note_collaborators"."updated_at" AS t1_r6 FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1 AND "notes"."id" IN ($2, $3) ORDER BY notes.created_at DESC[0m  [["user_id", 1], ["id", 9], ["id", 8]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 104ms (Views: 55.9ms | ActiveRecord: 32.4ms | Allocations: 46096)
+
+
+Completed 200 OK in 131ms (Views: 111.7ms | ActiveRecord: 8.0ms | Allocations: 67275)
+
+
+Started GET "/notes.json?draw=2&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=collaborators&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=true&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B5%5D%5Bdata%5D=actions&columns%5B5%5D%5Bname%5D=&columns%5B5%5D%5Bsearchable%5D=true&columns%5B5%5D%5Borderable%5D=false&columns%5B5%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B5%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=4&order%5B0%5D%5Bdir%5D=asc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597415034856" for ::1 at 2020-08-14 16:23:56 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"2", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"collaborators", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "5"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"4", "dir"=>"asc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597415034856"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "notes"."id" FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1) subquery_for_count[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "notes"."id" FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1) subquery_for_count[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.4ms | Allocations: 5967)
+
+
+  
+NoMethodError (undefined method `fetch' for nil:NilClass):
+  
+app/datatables/note_datatable.rb:28:in `data'
+app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+app/controllers/notes_controller.rb:7:in `index'
+Started GET "/cable" for ::1 at 2020-08-14 16:24:02 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:24:02 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT DISTINCT "notes"."id" FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "notes"."id" AS t0_r0, "notes"."title" AS t0_r1, "notes"."body" AS t0_r2, "notes"."user_id" AS t0_r3, "notes"."created_at" AS t0_r4, "notes"."updated_at" AS t0_r5, "note_collaborators"."id" AS t1_r0, "note_collaborators"."note_id" AS t1_r1, "note_collaborators"."email" AS t1_r2, "note_collaborators"."access" AS t1_r3, "note_collaborators"."status" AS t1_r4, "note_collaborators"."created_at" AS t1_r5, "note_collaborators"."updated_at" AS t1_r6 FROM "notes" LEFT OUTER JOIN "note_collaborators" ON "note_collaborators"."note_id" = "notes"."id" WHERE "notes"."user_id" = $1 AND "notes"."id" IN ($2, $3)[0m  [["user_id", 1], ["id", 8], ["id", 9]]
+Started GET "/notes" for ::1 at 2020-08-14 16:24:39 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 261)
+Completed 200 OK in 131ms (Views: 114.9ms | ActiveRecord: 3.9ms | Allocations: 53870)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:24:40 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:24:40 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=actions&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597415080212" for ::1 at 2020-08-14 16:24:40 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597415080212"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/notes" for ::1 at 2020-08-14 16:24:40 +0200
+Processing by NotesController#index as */*
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 122)
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 54ms (Views: 33.1ms | ActiveRecord: 11.3ms | Allocations: 15918)
+
+
+Completed 200 OK in 157ms (Views: 152.1ms | ActiveRecord: 1.3ms | Allocations: 52395)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-14 16:24:43 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RZma407nmsjMr8kwLJb8Qq0+7Hp2NXy/LofKnNMXY37nLe1IWAioLF04/unzKJy8W4HLUGd3Ut6/KgOtZrXNKQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms | Allocations: 4457)
+
+
+Started GET "/" for ::1 at 2020-08-14 16:24:43 +0200
+Processing by NotesController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-14 16:24:43 +0200
+Processing by SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 43.3ms | Allocations: 11894)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb___1060389471729759197_33060 at /Users/joekaldas/Documents/Dev/Web/notes/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 376ms (Views: 374.7ms | ActiveRecord: 0.0ms | Allocations: 58775)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/sessions.self.css?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/sessions.self.js?body=1" for ::1 at 2020-08-14 16:24:43 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:24:44 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:24:44 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:24:44 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/users/sign_in" for ::1 at 2020-08-14 16:25:03 +0200
+Processing by SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 6479)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.0ms | Allocations: 48369)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:04 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/sessions.self.css?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/sessions.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:04 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:04 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/users/sign_up" for ::1 at 2020-08-14 16:25:12 +0200
+Processing by RegistrationsController#new as HTML
+  Parameters: {"authenticity_token"=>"6ClHkyuNSeg018L/kY+kLvu5mvd6PlC21D2uO4cq6h3nYLx0ASbdRqWjwNx9Pf6atyOqhUOQhhe4IkFRbIkTkw=="}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 6812)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb___1060389471729759197_33660 at /Users/joekaldas/Documents/Dev/Web/notes/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 344ms (Views: 342.8ms | ActiveRecord: 0.0ms | Allocations: 52398)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:13 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/registrations.self.css?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/registrations.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:13 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:13 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:14 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/cable" for ::1 at 2020-08-14 16:25:14 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:14 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started POST "/users/sign_in" for ::1 at 2020-08-14 16:25:19 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"6ClHkyuNSeg018L/kY+kLvu5mvd6PlC21D2uO4cq6h3nYLx0ASbdRqWjwNx9Pf6atyOqhUOQhhe4IkFRbIkTkw==", "user"=>{"email"=>"joekaldas9@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "joekaldas9@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 139ms (ActiveRecord: 0.4ms | Allocations: 2488)
+
+
+Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"6ClHkyuNSeg018L/kY+kLvu5mvd6PlC21D2uO4cq6h3nYLx0ASbdRqWjwNx9Pf6atyOqhUOQhhe4IkFRbIkTkw==", "user"=>{"email"=>"joekaldas9@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 6064)
+Completed 200 OK in 191ms (Views: 64.0ms | ActiveRecord: 0.0ms | Allocations: 46335)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:19 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/sessions.self.css?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/sessions.self.js?body=1" for ::1 at 2020-08-14 16:25:19 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:20 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:20 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:20 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started POST "/users/sign_in" for ::1 at 2020-08-14 16:25:26 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"naMpSyYxC4R/cUxsoJB5tA7+lhvWC/ptYJf5t5fLLyuS6tKsDJqfKu4FTk9MIiMAQmSmae+lLMwMiBbdfGjWpQ==", "user"=>{"email"=>"joekaldas9@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "joekaldas9@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 0.5ms | Allocations: 3306)
+
+
+Started GET "/" for ::1 at 2020-08-14 16:25:26 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 256)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.3ms | Allocations: 45307)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:26 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:26 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:26 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=actions&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597415126392" for ::1 at 2020-08-14 16:25:26 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597415126392"}
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 1.4ms | Allocations: 5295)
+
+
+Started GET "/notes/new" for ::1 at 2020-08-14 16:25:29 +0200
+Processing by NotesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 193)
+  Rendered notes/_form.html.erb (Duration: 13.1ms | Allocations: 7126)
+  Rendered notes/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 7406)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 0.3ms | Allocations: 52295)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:29 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:29 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:29 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started POST "/notes" for ::1 at 2020-08-14 16:25:35 +0200
+Processing by NotesController#create as HTML
+  Parameters: {"authenticity_token"=>"+sT4iOsuK8qh0B7dnGDmtS8Kb0Zz2VoQkoP0jEg5YRZrH6KBQVViFNvkdYMkLRzp15COIZ7agOsn8gIOC9/9og==", "note"=>{"title"=>"Test note", "body"=>"test note\r\ntest note"}, "commit"=>"Add"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:22:in `create'
+  [1m[36mNote Create (1.8ms)[0m  [1m[32mINSERT INTO "notes" ("title", "body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test note"], ["body", "test note\r\ntest note"], ["user_id", 2], ["created_at", "2020-08-14 14:25:35.062827"], ["updated_at", "2020-08-14 14:25:35.062827"]]
+  ↳ app/controllers/notes_controller.rb:22:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:22:in `create'
+Redirected to http://localhost:3000/notes
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms | Allocations: 4929)
+
+
+Started GET "/notes" for ::1 at 2020-08-14 16:25:35 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 122)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.2ms | Allocations: 44711)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:35 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:35 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:35 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=actions&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597415135287" for ::1 at 2020-08-14 16:25:35 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597415135287"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Completed 200 OK in 11ms (Views: 5.2ms | ActiveRecord: 2.2ms | Allocations: 6103)
+
+
+Started GET "/notes/10" for ::1 at 2020-08-14 16:25:37 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 397)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.4ms | Allocations: 45891)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:38 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:38 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:38 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/notes/9/edit" for ::1 at 2020-08-14 16:25:40 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"authenticity_token"=>"Kbc65SjQhu+kW5I24lDqhSGLwa3VpedpGxZoc7poFWLGvv/km+2N3pZ8C/hjTbD9EhNurpuHV0IYYCybunEMOg==", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 9.1ms | Allocations: 6210)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 6348)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.5ms | Allocations: 52019)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:40 +0200
+NotesChannel stopped streaming from note-8:notes
+NotesChannel stopped streaming from note-9:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:40 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:40 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/notes/9/edit" for ::1 at 2020-08-14 16:25:41 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 10.2ms | Allocations: 6298)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6501)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 0.8ms | Allocations: 52146)
+
+
+Started GET "/notes/9/edit" for ::1 at 2020-08-14 16:25:55 +0200
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 10.0ms | Allocations: 6143)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 6203)
+Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 0.7ms | Allocations: 51583)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:56 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:56 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/notes/9/edit" for ::1 at 2020-08-14 16:25:56 +0200
+Processing by NotesController#edit as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered notes/_form.html.erb (Duration: 9.8ms | Allocations: 6146)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 10.0ms | Allocations: 6206)
+Completed 200 OK in 93ms (Views: 86.7ms | ActiveRecord: 0.7ms | Allocations: 51737)
+
+
+Started GET "/notes/9" for ::1 at 2020-08-14 16:25:58 +0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 60ms (Views: 55.8ms | ActiveRecord: 0.4ms | Allocations: 45585)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:58 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:25:58 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:25:58 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+Started GET "/notes/9" for ::1 at 2020-08-14 16:25:58 +0200
+Processing by NotesController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 186)
+Completed 200 OK in 66ms (Views: 58.3ms | ActiveRecord: 0.8ms | Allocations: 45735)
+
+
+Started PATCH "/notes/9" for ::1 at 2020-08-14 16:26:05 +0200
+Processing by NotesController#update as HTML
+  Parameters: {"authenticity_token"=>"iDpODYzhJ5QzNN/0jvItNSGVjkbwbkTCUC8zu0YxW+ZnM4sMP9wspQETRjoP73dNEg0hRb5M9OlTWXdTRihCvg==", "note"=>{"title"=>"Edit note title", "body"=>"This is a description\r\nAnother one\r\nOne\r\nAnother\r\nAnother Description"}, "commit"=>"Update", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 AND "notes"."id" = $2 LIMIT $3[0m  [["user_id", 1], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/notes_controller.rb:64:in `set_note'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notes_controller.rb:40:in `update'
+  [1m[36mNote Update (0.6ms)[0m  [1m[33mUPDATE "notes" SET "title" = $1, "updated_at" = $2 WHERE "notes"."id" = $3[0m  [["title", "Edit note title"], ["updated_at", "2020-08-14 14:26:05.494374"], ["id", 9]]
+  ↳ app/controllers/notes_controller.rb:40:in `update'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notes_controller.rb:40:in `update'
+[ActiveJob] [NoteBroadcastJob] [2ee42e27-b80d-4739-9b2e-22cbffbe8877] Performing NoteBroadcastJob (Job ID: 2ee42e27-b80d-4739-9b2e-22cbffbe8877) from DelayedJob(default) enqueued at  with arguments: #<GlobalID:0x00007fbad60d5140 @uri=#<URI::GID gid://rri-staffing/Note/9>>
+[ActiveJob] [NoteBroadcastJob] [2ee42e27-b80d-4739-9b2e-22cbffbe8877] [ActionCable] Broadcasting to note-9:notes: {:note_id=>9, :title=>"Edit note title", :body=>"This is a description\r\nAnother one\r\nOne\r\nAnother\r\nAnother Description"}
+NotesChannel transmitting {"note_id"=>9, "title"=>"Edit note title", "body"=>"This is a description\r\nAnother one\r\nOne\r\nAnother\r\nAnother Description"} (via streamed from note-9:notes)
+NotesChannel transmitting {"note_id"=>9, "title"=>"Edit note title", "body"=>"This is a description\r\nAnother one\r\nOne\r\nAnother\r\nAnother Description"} (via streamed from note-9:notes)
+[ActiveJob] [NoteBroadcastJob] [2ee42e27-b80d-4739-9b2e-22cbffbe8877] Performed NoteBroadcastJob (Job ID: 2ee42e27-b80d-4739-9b2e-22cbffbe8877) from DelayedJob(default) in 0.31ms
+NotesChannel transmitting {"note_id"=>9, "title"=>"Edit note title", "body"=>"This is a description\r\nAnother one\r\nOne\r\nAnother\r\nAnother Description"} (via streamed from note-9:notes)
+Redirected to http://localhost:3000/notes
+Completed 302 Found in 40ms (ActiveRecord: 7.4ms | Allocations: 12524)
+
+
+Started GET "/notes" for ::1 at 2020-08-14 16:26:05 +0200
+Processing by NotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+Completed 200 OK in 64ms (Views: 60.3ms | ActiveRecord: 0.3ms | Allocations: 44731)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-08-14 16:26:05 +0200
+NotesChannel stopped streaming from note-9:notes
+NotesChannel stopped streaming from note-8:notes
+Started GET "/assets/application.self.css?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/notes.self.css?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/jquery3.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/jquery_ujs.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/lib/jquery-ui.min.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/bootstrap.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/activestorage.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/action_cable.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/cable.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/channels/notes.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/lib/jquery.retryAjax.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/lib/sweetalert2.min.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/application.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/lib/datatables.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/lib/protip.min.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/notes.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/assets/popper.self.js?body=1" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/cable" for ::1 at 2020-08-14 16:26:05 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2020-08-14 16:26:05 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/notes.json?draw=1&columns%5B0%5D%5Bdata%5D=id&columns%5B0%5D%5Bname%5D=&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=created_at&columns%5B1%5D%5Bname%5D=&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=title&columns%5B2%5D%5Bname%5D=&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B3%5D%5Bdata%5D=body&columns%5B3%5D%5Bname%5D=&columns%5B3%5D%5Bsearchable%5D=true&columns%5B3%5D%5Borderable%5D=true&columns%5B3%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B3%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B4%5D%5Bdata%5D=actions&columns%5B4%5D%5Bname%5D=&columns%5B4%5D%5Bsearchable%5D=true&columns%5B4%5D%5Borderable%5D=false&columns%5B4%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B4%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=desc&start=0&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&_=1597415165757" for ::1 at 2020-08-14 16:26:06 +0200
+Processing by NotesController#index as JSON
+  Parameters: {"draw"=>"1", "columns"=>{"0"=>{"data"=>"id", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "1"=>{"data"=>"created_at", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "2"=>{"data"=>"title", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "3"=>{"data"=>"body", "name"=>"", "searchable"=>"true", "orderable"=>"true", "search"=>{"value"=>"", "regex"=>"false"}}, "4"=>{"data"=>"actions", "name"=>"", "searchable"=>"true", "orderable"=>"false", "search"=>{"value"=>"", "regex"=>"false"}}}, "order"=>{"0"=>{"column"=>"1", "dir"=>"desc"}}, "start"=>"0", "length"=>"10", "search"=>{"value"=>"", "regex"=>"false"}, "_"=>"1597415165757"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-8:notes
+NotesChannel is transmitting the subscription confirmation
+NotesChannel is streaming from note-9:notes
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "notes" WHERE "notes"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/notes_controller.rb:9:in `block (2 levels) in index'
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 ORDER BY notes.created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/datatables/note_datatable.rb:28:in `map'
+Started GET "/notes" for ::1 at 2020-08-14 16:26:06 +0200
+Completed 200 OK in 23ms (Views: 10.3ms | ActiveRecord: 5.6ms | Allocations: 6790)
+
+
+Processing by NotesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 120)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 0.4ms | Allocations: 44698)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1459297218988621530)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNoteCollaborators (20200814141555)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (30.3ms)[0m  [1m[35mDROP TABLE "note_collaborators"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200814141555"]]
+  [1m[35m (20.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1459297218988621530)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1459297218988621530)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNoteCollaborators (20200814141555)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "note_collaborators" ("id" bigserial primary key, "note_id" bigint, "user_id" bigint, "access" integer, "status" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_9e88945189"
+FOREIGN KEY ("note_id")
+  REFERENCES "notes" ("id")
+, CONSTRAINT "fk_rails_b6e53a4e4e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_note_collaborators_on_note_id" ON "note_collaborators"  ("note_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_note_collaborators_on_user_id" ON "note_collaborators"  ("user_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200814141555"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1459297218988621530)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mNoteCollaborator Create (1.2ms)[0m  [1m[32mINSERT INTO "note_collaborators" ("note_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["note_id", 10], ["user_id", 2], ["created_at", "2020-08-14 22:37:22.974969"], ["updated_at", "2020-08-14 22:37:22.974969"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNoteCollaborator Update (0.5ms)[0m  [1m[33mUPDATE "note_collaborators" SET "user_id" = $1, "updated_at" = $2 WHERE "note_collaborators"."id" = $3[0m  [["user_id", 1], ["updated_at", "2020-08-14 22:37:39.698865"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mNote Load (0.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNoteCollaborator Load (0.4ms)[0m  [1m[34mSELECT "note_collaborators".* FROM "note_collaborators" WHERE "note_collaborators"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNoteCollaborator Load (0.4ms)[0m  [1m[34mSELECT "note_collaborators".* FROM "note_collaborators" WHERE "note_collaborators"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" INNER JOIN "note_collaborators" ON "notes"."id" = "note_collaborators"."note_id" WHERE "note_collaborators"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
