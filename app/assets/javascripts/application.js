@@ -16,6 +16,7 @@
 //= require popper
 //= require bootstrap
 //= require activestorage
+//= require_tree ./channels
 //= require lib/jquery.retryAjax
 //= require lib/sweetalert2.min
 

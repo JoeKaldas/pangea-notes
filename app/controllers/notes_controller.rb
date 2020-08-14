@@ -37,7 +37,7 @@ class NotesController < ApplicationController
   end
 
   def update
-    @note.update_attributes(note_params)
+    @note.update(note_params)
 
     respond_to do |format|
       if @note.valid?

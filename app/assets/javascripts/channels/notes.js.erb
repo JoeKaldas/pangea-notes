@@ -1,0 +1,19 @@
+// app/assets/javascripts/channels/notes.js
+
+//= require cable
+//= require_self
+//= require_tree .
+
+this.App = {};
+
+App.cable = ActionCable.createConsumer();
+
+<% Note.all.each do |note| %>
+  App['note<%= note.id %>'] = App.cable.subscriptions.create({channel: 'NotesChannel', note: <%= note.id %>}, {  
+  received: function(data) {
+  	$(`.note_title${data.note_id}`).val(data.title)
+		$(`.note_body${data.note_id}`).html(data.body)
+    return true;
+  },
+});
+<% end %>

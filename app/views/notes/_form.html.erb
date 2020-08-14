@@ -8,15 +8,15 @@
       <div class="col-8 offset-2">
         <div class="bg-white p-3 my-3 position-sticky">
           <div class="col-12 mb-3">
-            <%= f.input :title, required: true %>
+            <%= f.input :title, required: true, input_html: {class: @note.id ? "note_title#{@note.id}" : "note_title"} %>
           </div>
           <div class="col-12 mb-3">
-            <%= f.input :body, required: true, input_html: {style: "min-height: 250px" } %>
+            <%= f.input :body, required: true, input_html: {class: @note.id ? "note_body#{@note.id}" : "note_body", style: "min-height: 250px" } %>
           </div>
         </div>
       </div>
       <div class="col-12 mb-3">
-        <center><%= f.button :submit, @note.id ? "Update" : "Add", :class=>"btn btn-dark text-uppercase"%></center>
+        <center><%= f.button :submit, @note.id ? "Update" : "Add", id: "btn-update-note", class: "btn btn-dark text-uppercase" %></center>
       </div>
     </div>
   <%end%>

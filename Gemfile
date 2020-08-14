@@ -74,3 +74,5 @@ gem 'fast_jsonapi'
 gem 'delayed_job_active_record'
 # Ajax for Datables
 gem 'ajax-datatables-rails'
+# For sockets
+gem 'redis'

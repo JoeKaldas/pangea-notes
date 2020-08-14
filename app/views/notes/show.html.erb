@@ -8,10 +8,10 @@
       </div>
     </div>
     <div class="col-12 mt-4">
-      <h5><%= @note.title %></h5>
+      <input type="text" class="note_title<%= @note.id %>" value="<%= @note.title %>">
     </div>
     <div class="col-12 mt-3">
-      <%= simple_format(@note.body) %>
+      <span class="note_body<%= @note.id %>" style="white-space: pre-line;"><%= @note.body %></span>
     </div>
   </div>
 </div>

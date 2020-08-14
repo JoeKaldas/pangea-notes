@@ -59,6 +59,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.action_cable.url = "ws://localhost:3000/cable"
+
   config.action_controller.default_url_options = { host: "localhost", port: 3000 }
   Rails.application.routes.default_url_options[:host] = "localhost:3000"
 
