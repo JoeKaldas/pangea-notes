@@ -57,10 +57,6 @@ Rails version: '>= 6.0.0'
 bundle install
 rake notes:fresh
 rails s
-
-Sign up as a user
-Create a note
-Add a collaborator with chosen access (view/edit)
 ```
 
 ## Database used
