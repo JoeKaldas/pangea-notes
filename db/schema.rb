@@ -32,13 +32,12 @@ ActiveRecord::Schema.define(version: 2020_08_14_141555) do
 
   create_table "note_collaborators", force: :cascade do |t|
     t.bigint "note_id"
-    t.bigint "user_id"
+    t.string "email"
     t.integer "access"
     t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["note_id"], name: "index_note_collaborators_on_note_id"
-    t.index ["user_id"], name: "index_note_collaborators_on_user_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -63,6 +62,5 @@ ActiveRecord::Schema.define(version: 2020_08_14_141555) do
   end
 
   add_foreign_key "note_collaborators", "notes"
-  add_foreign_key "note_collaborators", "users"
   add_foreign_key "notes", "users"
 end

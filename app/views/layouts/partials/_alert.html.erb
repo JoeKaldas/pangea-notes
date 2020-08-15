@@ -1,0 +1,15 @@
+<!-- alert -->
+<div>
+    <% if flash[:notice] and flash[:notice] != "-1"%>
+        <div class="alert alert-success fade alert-dismissible show cursor-pointer" role="alert" style="margin: 10px 0">
+            <i class="fas fa-times text-black float-right" data-dismiss="alert" aria-label="Close"></i>
+            <%= flash[:notice]%>
+        </div>
+    <% end %>
+    <% if flash[:alert] and flash[:alert] != "-1"%>
+        <div class="alert alert-danger fade alert-dismissible show cursor-pointer" role="alert" style="margin: 10px 0">
+            <i class="fas fa-times text-black float-right" data-dismiss="alert" aria-label="Close"></i>
+            <%= flash[:alert]%>
+        </div>
+    <% end %>
+</div>

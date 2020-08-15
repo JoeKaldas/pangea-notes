@@ -5,6 +5,4 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable
 
   has_many :notes
-  has_many :note_collaborators
-
 end

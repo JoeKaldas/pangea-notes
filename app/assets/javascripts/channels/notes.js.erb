@@ -4,26 +4,47 @@
 //= require_self
 //= require_tree .
 
-this.App = {};
-
-App.cable = ActionCable.createConsumer();
-
 <% Note.all.each do |note| %>
   App['note<%= note.id %>'] = App.cable.subscriptions.create({channel: 'NotesChannel', note: <%= note.id %>}, {
   	// Called when the subscription is ready for use on the server.
-  connected() {
-  	console.log("connected")
-  },
- 
-  // Called when the WebSocket connection is closed.
-  disconnected() {
-  	console.log("disconnected")
-  },
+    connected() {
+      $("#div-offline").addClass("d-none")
+      this.perform('update_user_status', {
+        note_id: "<%= note.id %>",
+        email: current_user_email,
+        status: 1
+      });
+    },
+   
+    // Called when the WebSocket connection is closed.
+    disconnected() {
+      $("#div-offline").removeClass("d-none")
+      this.perform('update_user_status', {
+        note_id: "<%= note.id %>",
+        email: current_user_email,
+        status: 0
+      });
+    },
 
-  received: function(data) {
-  	$(`.note_title${data.note_id}`).val(data.title)
-		$(`.note_body${data.note_id}`).html(data.body)
-    return true;
-  },
-});
+    received: function(data) {
+      console.log(data)
+      if (data.title != null) {
+        $(`.note_title${data.note_id}`).val(data.title)
+        $(`.note_title${data.note_id}`).html(data.title)
+
+        $(`.note_body${data.note_id}`).val(data.body)
+        $(`.note_body${data.note_id}`).html(data.body)
+      } else if (data.email != null) {
+        if ($("#collaborators").length) {
+          if (data.status == "inactive") {
+            $(`[data-email="${data.email}"]`).remove()
+          } else if ($(`[data-email="${data.email}"]`).length == 0) {
+            $("#collaborators").append(`<li data-email="${data.email}">${data.email}</li>`)
+          }
+        }
+      }
+
+      return true;
+    },
+  });
 <% end %>

@@ -1,0 +1,30 @@
+<div class="modal-body form-partial" style="padding: 0; position:relative">
+  <%= simple_form_for @note_collaborator, authenticity_token: true, remote: true do |f| %>
+    <div class="d-flex justify-content-between">
+      <h5 class="modal_title pd-r-15">Share with others</h5>
+      <a class="modalx" data-dismiss="modal"><span class="fas fa-times"></span></a>
+    </div>
+    <div class="row my-3">
+      <%= f.input :note_id, as: :hidden, required: true, input_html: { value: params[:note_id] } %>
+      <div class="col-12 d-flex border border-dark p-2 mx-3 mb-4">
+        <label>Link:</label> <span class="ml-2"><a href="http://localhost:3000/notes/<%= params[:note_id] %>" target="_blank">http://localhost:3000/notes/<%= params[:note_id] %></a></span>
+      </div>
+      <div class="col-12">
+        <%= render 'layouts/partials/error_messages', object: @note_collaborator %>
+      </div>
+      <div class="col-6">
+        <%= f.input :email, required: true, input_html: { :autocomplete => "off", :class => "input" } %>
+      </div>
+      <div class="col-6">
+        <%= f.input :access, :collection => NoteCollaborator.accesses.keys, label_method: -> (obj){ t(obj.humanize) }, label: "Access", required: true %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <center>
+          <%= f.button :submit, "Add", :class =>"btn btn-dark wd-150 text-uppercase" %>
+        </center>
+      </div>
+    </div>
+  <% end %>
+</div>

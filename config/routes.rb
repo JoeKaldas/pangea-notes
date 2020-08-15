@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { sessions: "sessions", registrations: "registrations" }
 
   resources :notes
+  resources :note_collaborators
 
   root to: "notes#index"
 end

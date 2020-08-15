@@ -115,3 +115,5 @@ $.rails.confirmed = function(link) {
 	link.data('confirm', null);
 	link.trigger('click.rails');
 };
+
+current_user_email = ""

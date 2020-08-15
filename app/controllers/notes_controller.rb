@@ -11,7 +11,11 @@ class NotesController < ApplicationController
   end
 
   def show
+    if !@note
+      return render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found
+    end
 
+    @edit = (NoteCollaborator.find_by(note_id: params[:id], email: current_user.email) and NoteCollaborator.find_by(note_id: params[:id], email: current_user.email).edit?)
   end
 
   def new
@@ -61,7 +65,7 @@ class NotesController < ApplicationController
 
   private
   def set_note
-    @note = current_user.notes.find_by(id: params[:id])
+    @note = Note.joins(:note_collaborators).where(id: params[:id]).find_by("note_collaborators.email =?", current_user.email)
   end
 
   def note_params

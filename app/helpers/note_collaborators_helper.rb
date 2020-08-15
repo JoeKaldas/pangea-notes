@@ -1,0 +1,2 @@
+module NoteCollaboratorsHelper
+end
